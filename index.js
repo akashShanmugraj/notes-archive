@@ -1,7 +1,7 @@
 import express from "express";
 import path from 'path';
 
-const app  = express();
+const app = express();
 
 app.get("/", (req, res) => {
     res.sendfile('./index.html')
@@ -21,4 +21,4 @@ app.get('/eco/cost-revenue', (req, res) => {
 
 app.listen(3030, () => {
     console.log(`Server is listening on http://localhost:3030`);
-  });
+})
