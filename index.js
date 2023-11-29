@@ -11,6 +11,6 @@ app.get('/carch/pipelining', (req, res) => {
     res.sendfile('./pipelining.html')
 })
 
-app.listen(3000, () => {
+app.listen(3030, () => {
     console.log(`Server is listening on http://localhost:${process.env.PORT}`);
   });
