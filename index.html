@@ -1480,11 +1480,14 @@
         <h1 id="Notes-Archive" data-id="Notes-Archive"><a class="anchor hidden-xs" href="#Notes-Archive"
                 title="Notes-Archive"><span class="octicon octicon-link"></span></a><span>Notes Archive</span></h1>
         <p><span>This archive contains some essential jot-downs and notes managed and maintained by </span><a
-                href="https://akashshanmugaraj.com" target="_blank" rel="noopener"><span>Akash Shanmugaraj</span></a>
+                href="https://github.com/akashShanmugraj/" target="_blank" rel="noopener"><span>Akash Shanmugaraj</span></a>
         </p>
         <p><span>These notes were originally taken in </span><code>markdown</code><span> syntax and was transpiled to a
-            </span><code>HTML</code><span> file using </span><a href="https://www.hackmd.io" target="_blank"
-                rel="noopener"><span>hackmd.io</span></a></p>
+        </span><code>HTML</code><span> file using </span><a href="https://www.hackmd.io" target="_blank"
+        rel="noopener"><span>hackmd.io</span></a></p>
+        
+        <p><span>last commit: </span><a href="https://github.com/akashShanmugraj/notes-archive"><span id="commit-info"></span></a></p>
+        
         <h2 id="Index-of-Contents" data-id="Index-of-Contents"><a class="anchor hidden-xs" href="#Index-of-Contents"
                 title="Index-of-Contents"><span class="octicon octicon-link"></span></a><span>Index of Contents</span>
         </h2>
@@ -1500,6 +1503,14 @@
 
         </ul>
     </div>
+    <script>
+        fetch('https://api.github.com/repos/akashShanmugraj/notes-archive/commits')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("commit-info").innerHTML = data[0].commit.message;
+        })
+        .catch(error => console.error('Error:', error));
+    </script>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
             <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button"
