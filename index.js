@@ -24,5 +24,5 @@ app.get('/java/collections', (req, res) => {
 })
 
 app.listen(3031, () => {
-    console.log(`Server is listening on http://localhost:3030`);
+    console.log(`Server is listening on http://localhost:3031`);
 })
